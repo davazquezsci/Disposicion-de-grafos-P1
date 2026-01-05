@@ -49,8 +49,34 @@ Se utiliza una aproximación por celdas espaciales para mantener una complejidad
 aproximada **O(m + n)** por iteración.
 
 ## Estructura del proyecto
+  Proyecto-5/
+  │
+  ├── lib/
+  │ └── Biblioteca-grafos/ # Proyecto 1 (sin modificaciones)
+  │
+  ├── src/
+  │ ├── grafo_layout.py # Implementación del Spring Layout
+  │ └── viewer_pygame.py # Visualizador interactivo (pygame)
+  │
+  ├── scripts/
+  │ ├── generar_grafos.py # Generación de grafos (12 casos)
+  │ ├── correr_layout.py # Batch: layout + screenshots
+  │ └── render_pygame.py # Visualización interactiva
+  │
+  ├── outputs/
+  │ ├── data/
+  │ │ └── layouts/ # Posiciones finales (JSON)
+  │ │
+  │ ├── img/
+  │ │ ├── n100/ # Imágenes (100 nodos)
+  │ │ └── n500/ # Imágenes (500 nodos)
+  │ │
+  │ └── videos/
+  │ └── LINKS.md # Enlaces a videos
+  │
+  ├── README.md
+  └── requirements.txt
 
-Ver el árbol de directorios en este repositorio.
 
 ## Uso
 
@@ -74,5 +100,5 @@ Los enlaces a videos se encuentran en:
 
 ## Autor
 
-Proyecto desarrollado para la materia **Diseño de Algoritmos**  
+Daniel Vázquez
 Maestría en Ciencias de la Computación – IPN
