@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # ============================================================
-# Proyecto 5: módulos locales (estilo Proyecto 4)
+# Proyecto 5: " python scripts/correr_layout.py" 
 # ============================================================
 sys.path.insert(0, str(ROOT / "src"))
 from grafo_layout import spring_eades_layout, SpringParams, save_layout_json  # noqa: E402

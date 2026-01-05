@@ -6,10 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # ============================================================
-# Proyecto 5: módulos locales (mismo patrón que Proyecto 4)
-#   - Importamos como módulos planos desde ROOT/src:
-#       from grafo_layout import ...
-#       from viewer_pygame import ...
+# Para Correr , emplear 
 # ============================================================
 sys.path.insert(0, str(ROOT / "src"))
 
@@ -36,19 +33,20 @@ import modelos  # noqa: E402
 
 
 def main():
-    g = modelos.grafoErdosRenyi(100, 200, False, seed=1)
+    g = modelos.grafoGeografico(500, 0.10, False, seed=2)
 
     params = SpringParams(
-        c2=120.0,
-        cell_size=140.0,
-        iters=200,
-        max_disp=10.0,
+        c2=90.0,
+        cell_size=110.0,
+        iters=300,
+        max_disp=8.0,
     )
 
-    pos = spring_eades_layout(g, width=1200, height=800, seed=1, params=params)
+    pos = spring_eades_layout(g, width=1200, height=800, seed=2, params=params)
 
-    viewer = PygameViewer(g, pos, width=1200, height=800, title="Spring (Eades) - n=100")
+    viewer = PygameViewer(g, pos, width=1200, height=800, title="Spring (Eades) - Geografico n=500")
     viewer.run(screenshot_dir=str(ROOT / "outputs" / "img"))
+
 
 
 if __name__ == "__main__":
